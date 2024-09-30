@@ -40,3 +40,16 @@
 ####HEAD
 HEAD - один из служебных файлов папки .git. Указывает на коммит, который был сделан последним.
 Содержит в себе хеш последнегокоммита.
+
+####Диаграмма статусов
+
+```mermaid
+  graph LR;
+ untracked--"git add"--> staged;
+ staged--"git add"--> tracked/comitted;
+ tracked--"git commit -m"-->tracked;
+ modified--"changes"-->staged;
+
+```
+
+
